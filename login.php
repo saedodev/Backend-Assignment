@@ -59,6 +59,7 @@
         
         <button>Log in</button>
     </form>
+    <a href="signup.html"><button>Signup here!</button></a>
 
 </body>
 </html>
