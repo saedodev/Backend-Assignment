@@ -48,10 +48,9 @@ if ($stmt->execute()) {
     exit;
     
 } else {
-    
-    if ($connection->error === 1062) {
-        die("email already taken");
+    if ($stmt->errno === 1062) {
+        die("Email already taken");
     } else {
-        die($connection->error . " " . $connection->connect_error);
+        die("Database error: " . $stmt->error);
     }
 }
